@@ -9,8 +9,67 @@
   --Grey50:  hsl(0, 0%, 99%); /*light mode background*/
   --White:  hsl(0, 100%, 100%); /*dark mode text & light mode elements*/
   --default-font:"Nunito Sans", sans-serif;
+
+   /* light mode por padrão */
+  --bg-color: var(--White);
+  --text-color: var(--Grey950);
+  --element-color: var(--White);
+
 }
 
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--default-font);
+}
+
+
+/* modo escuro */
+body.dark-mode {
+  --bg-color: var(--Blue950);
+  --text-color: var(--White);
+  --element-color: var(--Blue900);
+}
+
+/* modo claro */
+body.white-mode {
+  --bg-color: var(--White);
+  --text-color: var(--Grey950);
+  --element-color: var(--White);
+}
+
+/* aplica cores globais */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* exemplo para elementos */
+header, div, section {
+  background-color: var(--element-color);
+  color: var(--text-color);
+}
+
+/*--------------------------------------------------------------*/
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.button-header{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color);
+}
 
 /*
 ### Body Copy
@@ -18,4 +77,3 @@
 - Homepage Items: 14px
 - Detail Page: 16px
 */
-
