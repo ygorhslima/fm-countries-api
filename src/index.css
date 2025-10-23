@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+/*--------------------------------------------GENERAL SETTINGS-----------------------------------------------------*/
 
 :root{
   --Blue900: hsl(209, 23%, 22%); /*dark mode elements*/
@@ -46,12 +47,16 @@ body {
 }
 
 /* exemplo para elementos */
-header, div, section {
+header {
   background-color: var(--element-color);
   color: var(--text-color);
 }
 
-/*--------------------------------------------------------------*/
+/*--------------------------------------------GENERAL SETTINGS-----------------------------------------------------*/
+
+
+
+/*----------------------- HEADER COMPONENT ---------------------------------------*/
 .header{
   display: flex;
   justify-content: space-between;
@@ -70,6 +75,19 @@ header, div, section {
   gap: 8px;
   color: var(--text-color);
 }
+
+/*----------------------- HEADER COMPONENT ---------------------------------------*/
+
+/*----------------------- MAIN COMPONENT ---------------------------------------*/
+
+.main{
+  margin: auto;
+  
+}
+
+
+/*----------------------- MAIN COMPONENT ---------------------------------------*/
+
 
 /*
 ### Body Copy
