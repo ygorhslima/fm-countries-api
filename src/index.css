@@ -92,13 +92,32 @@ header {
 
 .countries-container{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4,20%);
   grid-template-rows: repeat(4,1fr);
+  justify-content: center;
   grid-auto-rows: 1fr;
 }
 
-.img-flag{
-  width: 30%;
+.countrie-item{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 10px;
+  background-color: var(--element-color);
+  color: var(--text-color);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.308);
+}
+
+.countrie-img-container{
+  width: 100%;
+  height: auto;
+}
+
+.countrie-img-container .img-flag{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 /*----------------------- COUNTRIE COMPONENT ---------------------------------------*/
@@ -110,3 +129,11 @@ header {
 - Homepage Items: 14px
 - Detail Page: 16px
 */
+
+
+@media screen and (max-width:768px) {
+  .countries-container{
+    grid-template-columns: 1fr;
+
+  }
+}

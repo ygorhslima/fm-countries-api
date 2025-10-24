@@ -18,10 +18,15 @@ interface propsCountrie{
     */
 }
 
+
 export default function Countrie(props:propsCountrie){
     return(
-        <div>
-            <img src={props.flag} alt={props.name} className="img-flag" />
+        <div className="countrie-item" onClick={()=>{
+            console.log("cliquei no item")
+        }}>
+            <div className="countrie-img-container">
+                <img src={props.flag} alt={props.name} className="img-flag" />
+            </div>
             <h3>{props.name}</h3>
             <p>Population: {props.population}</p>
             <p>Region: {props.region}</p>
