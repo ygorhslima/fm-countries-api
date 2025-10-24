@@ -121,19 +121,17 @@ header {
 }
 
 /*----------------------- COUNTRIE COMPONENT ---------------------------------------*/
-
-
-/*
-### Body Copy
-
-- Homepage Items: 14px
-- Detail Page: 16px
-*/
-
+.display-countrie-details{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+/*----------------------- COUNTRIE DETAILS COMPONENT ---------------------------------------*/
 
 @media screen and (max-width:768px) {
   .countries-container{
     grid-template-columns: 1fr;
-
   }
 }

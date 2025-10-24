@@ -1,29 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-interface propsCountrie{
-    /*initials informations*/
+import type { propsCountrie } from "../interfaces/propsCountrie";
 
-    flag:any;
-    name:string;
-    population:number;
-    region:string;
-    capital:any;
+export default function Countrie(props:propsCountrie & { onSelect:(data:propsCountrie)=>void }){
 
-    /*details informations
-        native_name:string;
-        sub_region:string;
-        top_level_domain:string;
-        currencies:string;
-        languages:string;    
-    */
-}
+    // função para lidar com o clique
+    const handleClick = () =>{
+        props.onSelect(props);
+    }
 
-
-export default function Countrie(props:propsCountrie){
     return(
-        <div className="countrie-item" onClick={()=>{
-            console.log("cliquei no item")
-        }}>
+        <div className="countrie-item" onClick={handleClick}>
             <div className="countrie-img-container">
                 <img src={props.flag} alt={props.name} className="img-flag" />
             </div>
